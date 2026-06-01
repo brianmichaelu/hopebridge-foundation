@@ -23,9 +23,9 @@ export default function Footer() {
           <div className="mt-5 flex items-start gap-2 rounded-2xl bg-white/10 p-4 text-xs leading-6 text-emerald-50">
             <ShieldCheck className="mt-1 shrink-0" size={18} />
             <span>
-              This is a demo NGO website. Payment integration can be connected
-              to Stripe, PayPal, Flutterwave, Pesapal, DPO, Selcom, or mobile
-              money gateways for a live organization.
+              Secure donation integration can be connected through Stripe, PayPal,
+              Flutterwave, Pesapal, DPO, Selcom, or mobile money gateways for a
+              live organization.
             </span>
           </div>
         </div>
@@ -71,8 +71,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-emerald-50/70">
-        © {new Date().getFullYear()} HopeBridge Foundation. Demo portfolio
-        website by Brian Justo Undiri.
+        © {new Date().getFullYear()} HopeBridge Foundation. Website by Brian Justo Undiri.
       </div>
     </footer>
   );

@@ -47,7 +47,7 @@ export default function HeroSection() {
   const slide = slides[activeSlide];
 
   return (
-    <section className="relative min-h-[680px] overflow-hidden bg-black">
+    <section className="relative min-h-[650px] overflow-hidden bg-black">
       {slides.map((item, index) => (
         <Image
           key={item.image}
@@ -83,7 +83,7 @@ export default function HeroSection() {
         <ChevronRight size={28} />
       </button>
 
-      <div className="container-width relative z-10 flex min-h-[680px] items-center justify-center px-5 pb-40 pt-16 text-center lg:px-12">
+      <div className="container-width relative z-10 flex min-h-[650px] items-center justify-center px-5 pb-32 pt-16 text-center lg:px-12">
         <div className="mx-auto max-w-5xl text-white">
           <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-white/70 bg-white/10 backdrop-blur">
             <HeartHandshake size={38} />
@@ -101,6 +101,19 @@ export default function HeroSection() {
             {slide.text}
           </p>
 
+<div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:hidden">
+  <Link href="/donate" className="btn-primary">
+    Donate Now <ArrowRight className="ml-2" size={18} />
+  </Link>
+
+  <Link
+    href="/causes"
+    className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/10 px-6 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-forest"
+  >
+    Explore Causes
+  </Link>
+</div>
+          
           <div className="mt-9 flex justify-center gap-3">
             {slides.map((item, index) => (
               <button
@@ -119,14 +132,14 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 z-20 w-[92%] max-w-6xl -translate-x-1/2 rounded-3xl bg-white p-5 shadow-2xl">
+      <div className="absolute bottom-6 left-1/2 z-20 hidden w-[92%] max-w-6xl -translate-x-1/2 rounded-3xl bg-white p-5 shadow-2xl lg:block">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.25em] text-coral">
               Donate Today
             </p>
-            <h2 className="mt-1 text-2xl font-black text-navy">
-              Help fund meals, education, clean water, healthcare, and care programs.
+            <h2 className="mt-1 text-xl font-black text-navy">
+                Help fund meals, education, clean water, healthcare, and care programs.
             </h2>
           </div>
 

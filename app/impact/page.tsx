@@ -123,7 +123,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
+      <section className="bg-white px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-14">
         <div className="container-width grid gap-6 lg:grid-cols-2">
           <div className="rounded-[2rem] bg-forest p-8 text-white lg:p-10">
             <ChartPie className="text-gold" size={36} />

@@ -10,11 +10,11 @@ export default function ProgramsSection() {
             Featured Causes
           </span>
           <h2 className="mt-3 text-4xl font-black text-navy lg:text-5xl">
-            Choose a cause and help create measurable impact
+            Support a cause that changes lives
           </h2>
           <p className="mt-4 text-slate-600">
-            These demo causes show how a real NGO can present programs,
-            fundraising goals, progress, and clear donation actions.
+              Choose a program to support and help provide practical care through food
+              assistance, school support, clean water, healthcare, and community outreach.
           </p>
         </div>
 

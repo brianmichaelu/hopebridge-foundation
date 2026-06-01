@@ -16,8 +16,13 @@ export default function GallerySection() {
             Project Gallery
           </span>
           <h2 className="mt-3 text-4xl font-black text-navy lg:text-5xl">
-            Real stories deserve a visual, human presentation
+            Stories of hope from the communities we serve
           </h2>
+
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+              A glimpse into the programs, people, and community work supported through
+              donations, partnerships, and volunteer action.
+        </p>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">

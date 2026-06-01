@@ -20,7 +20,7 @@ export default function FAQAccordion({ limit }: Props) {
             Questions
           </span>
           <h2 className="mt-3 text-4xl font-black text-navy">
-            Donation and website integration FAQ
+            Questions donors often ask
           </h2>
         </div>
 

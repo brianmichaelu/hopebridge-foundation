@@ -37,7 +37,7 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="section-padding bg-white">
+   <section className="bg-white px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-14">
       <div className="container-width">
         <div className="grid items-end gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
@@ -45,7 +45,7 @@ export default function ImpactStats() {
               Our Impact
             </span>
 
-            <h2 className="mt-3 text-4xl font-black leading-tight text-navy lg:text-5xl">
+            <h2 className="mt-3 text-4xl font-black leading-tight text-navy lg:text-[46px]">
               Small acts of giving become real community change.
             </h2>
 

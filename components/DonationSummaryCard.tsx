@@ -32,8 +32,8 @@ export default function DonationSummaryCard({ amount, donationType, cause }: Pro
       </div>
 
       <div className="mt-6 rounded-2xl bg-forest p-4 text-xs leading-6 text-white">
-        Demo mode: no real money will be collected. Connect a backend API route
-        and payment provider before using this for a live NGO.
+        Your donation will be processed through a secure payment gateway when live
+        payment integration is connected.
       </div>
     </aside>
   );

@@ -5,23 +5,23 @@ export type FAQ = {
 
 export const faqs: FAQ[] = [
   {
-    question: "Is this donation website ready for real payment integration?",
+    question: "How will my donation be used?",
     answer:
-      "Yes. The donation form is structured so a developer can connect Stripe, PayPal, Flutterwave, Pesapal, DPO, Selcom, or mobile money gateways through a secure backend/API route."
+      "Your donation supports programs such as food assistance, school supplies, clean water, healthcare outreach, women and girls empowerment, and elderly care.",
   },
   {
-    question: "Does the website collect card details directly?",
+    question: "Can I choose the cause I want to support?",
     answer:
-      "No. A secure live version should redirect donors to an approved payment gateway checkout page. Card details should never be stored directly on this website."
+      "Yes. Donors can select a specific cause such as education, food support, clean water, healthcare, or general community support.",
   },
   {
-    question: "Can the NGO edit causes and campaigns later?",
+    question: "Is the donation process secure?",
     answer:
-      "Yes. The demo uses data files now, but it can later be connected to a CMS or admin dashboard so non-technical staff can update campaigns."
+      "Yes. A live version of this website can connect to secure payment gateways such as Stripe, PayPal, Flutterwave, Pesapal, DPO, Selcom, or mobile money providers.",
   },
   {
-    question: "Can donations be tracked in a database?",
+    question: "Can I donate monthly?",
     answer:
-      "Yes. A live version can store donor records, payment status, campaign totals, receipts, and webhook confirmations in a database."
-  }
+      "Yes. Monthly giving can be added through a supported payment provider so donors can give automatically and help the organization plan long-term programs.",
+  },
 ];

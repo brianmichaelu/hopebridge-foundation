@@ -106,8 +106,7 @@ export default function ImpactStats() {
               </h3>
 
               <p className="mt-4 leading-8 text-emerald-50/80">
-                Use this featured impact banner to highlight one major campaign
-                or urgent community project.
+                Safe water projects help reduce disease, support children’s health, and give families more time for school, work, and daily life.
               </p>
             </div>
 

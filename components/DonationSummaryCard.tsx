@@ -8,7 +8,7 @@ type Props = {
 
 export default function DonationSummaryCard({ amount, donationType, cause }: Props) {
   return (
-    <aside className="sticky top-28 rounded-[2rem] bg-white p-7 shadow-xl ring-1 ring-slate-100">
+    <aside className="sticky top-28 rounded-[2rem] bg-white p-6 shadow-xl ring-1 ring-slate-100">
       <p className="text-sm font-black uppercase tracking-[0.25em] text-coral">
         Donation Summary
       </p>

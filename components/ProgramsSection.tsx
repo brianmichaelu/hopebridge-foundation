@@ -3,7 +3,7 @@ import { featuredCauses } from "@/data/causes";
 
 export default function ProgramsSection() {
   return (
-    <section className="bg-cream px-5 pb-16 pt-12 sm:px-8 lg:px-12 lg:pb-24 lg:pt-16">
+    <section className="bg-cream px-5 pb-12 pt-12 sm:px-8 lg:px-12 lg:pb-16 lg:pt-16">
       <div className="container-width">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-sm font-black uppercase tracking-[0.25em] text-coral">

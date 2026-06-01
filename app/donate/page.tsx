@@ -9,11 +9,11 @@ export default function DonatePage() {
             Donate
           </span>
           <h1 className="mt-3 max-w-3xl text-5xl font-black lg:text-6xl">
-            Your support can power real programs
+            Your support can change lives
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-emerald-50/80">
-            Choose a one-time or monthly donation. This demo is structured for
-            future secure checkout integration.
+            Choose a one-time or monthly donation and support programs that provide food,
+            education, clean water, healthcare, and community care.
           </p>
         </div>
       </section>

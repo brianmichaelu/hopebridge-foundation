@@ -41,8 +41,14 @@ export default function DonationForm() {
   }, [amount, customAmount]);
 
   function updateField<K extends keyof FormState>(key: K, value: FormState[K]) {
-    setForm((current) => ({ ...current, [key]: value }));
-  }
+  setForm((current) => ({ ...current, [key]: value }));
+
+  setErrors((current) => {
+    const nextErrors = { ...current };
+    delete nextErrors[key];
+    return nextErrors;
+  });
+}
 
   function validate() {
     const nextErrors: Record<string, string> = {};
@@ -137,7 +143,14 @@ export default function DonationForm() {
             </div>
             <input
               value={customAmount}
-              onChange={(event) => setCustomAmount(event.target.value)}
+              onChange={(event) => {
+              setCustomAmount(event.target.value);
+              setErrors((current) => {
+              const nextErrors = { ...current };
+              delete nextErrors.amount;
+              return nextErrors;
+          });
+}}
               type="number"
               min="1"
               placeholder="Custom amount"

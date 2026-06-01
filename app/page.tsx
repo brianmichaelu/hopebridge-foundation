@@ -16,16 +16,22 @@ export default function Home() {
       <ProgramsSection />
       <DonationCTA />
 
-      <section className="section-padding bg-white">
-        <div className="container-width">
-          <div className="mb-10 max-w-3xl">
-            <span className="text-sm font-black uppercase tracking-[0.25em] text-coral">
-              Active Campaigns
-            </span>
-            <h2 className="mt-3 text-4xl font-black text-navy lg:text-5xl">
-              Campaign sections that help donors understand urgency
-            </h2>
-          </div>
+      <section className="bg-white px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
+  <div className="container-width">
+    <div className="mb-10 max-w-3xl">
+      <span className="text-sm font-black uppercase tracking-[0.25em] text-coral">
+        Active Campaigns
+      </span>
+
+      <h2 className="mt-3 text-4xl font-black leading-tight text-navy lg:text-[48px]">
+        Urgent programs you can support today
+      </h2>
+
+      <p className="mt-4 text-lg leading-8 text-slate-600">
+        These campaigns highlight immediate needs where donor support can help
+        families, children, and communities receive practical care.
+      </p>
+    </div>
           <div className="grid gap-6 lg:grid-cols-3">
             <CampaignCard
               tag="Emergency food"

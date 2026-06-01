@@ -29,7 +29,7 @@ export default function GallerySection() {
           {images.map((src, index) => (
             <div
               key={src}
-              className={`relative overflow-hidden rounded-[2rem] ${
+              className="relative min-h-[320px] overflow-hidden rounded-[2rem]"
                 index === 0 ? "lg:col-span-2 lg:row-span-2 min-h-[420px]" : "min-h-[260px]"
               }`}
             >

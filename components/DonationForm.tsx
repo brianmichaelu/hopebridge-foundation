@@ -83,7 +83,7 @@ export default function DonationForm() {
   }
 
   return (
-    <section className="section-padding bg-cream">
+    <section className="bg-cream px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
       <div className="container-width grid gap-8 lg:grid-cols-[1fr_380px]">
         <form onSubmit={handleSubmit} className="rounded-[2rem] bg-white p-6 shadow-sm lg:p-10">
           <span className="text-sm font-black uppercase tracking-[0.25em] text-coral">

@@ -13,9 +13,9 @@ export default function ThankYouPage() {
             Thank you for your support
           </h1>
           <p className="mt-5 leading-8 text-slate-600">
-            Demo confirmation: your donation details were submitted
-            successfully. In a live version, this page would confirm payment
-            after webhook verification from the payment provider.
+            Your donation details were submitted successfully. Thank you for choosing
+            to support programs that help families, children, and communities receive
+            practical care.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="/" className="btn-primary">

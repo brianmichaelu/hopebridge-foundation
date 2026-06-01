@@ -33,21 +33,33 @@ export default function Home() {
       </p>
     </div>
           <div className="grid gap-6 lg:grid-cols-3">
+            
             <CampaignCard
-              tag="Emergency food"
-              title="30-Day Family Food Pack Drive"
-              description="Help provide essential food packs for families facing temporary hardship."
-            />
-            <CampaignCard
-              tag="Back to school"
-              title="School Supplies for 500 Children"
-              description="Support uniforms, books, pens, bags, and mentoring for students."
-            />
-            <CampaignCard
-              tag="Water access"
-              title="Clean Water Storage Project"
-              description="Fund water tanks and hygiene education for underserved communities."
-            />
+  tag="Emergency food"
+  title="30-Day Family Food Pack Drive"
+  description="Help provide essential food packs for families facing temporary hardship."
+  image="/images/food-support.png"
+  raised="$18,500"
+  goal="$30,000"
+/>
+
+<CampaignCard
+  tag="Back to school"
+  title="School Supplies for 500 Children"
+  description="Support uniforms, books, pens, bags, and mentoring for students."
+  image="/images/children-education.png"
+  raised="$24,100"
+  goal="$40,000"
+/>
+
+<CampaignCard
+  tag="Water access"
+  title="Clean Water Storage Project"
+  description="Fund water tanks and hygiene education for underserved communities."
+  image="/images/clean-water.png"
+  raised="$31,200"
+  goal="$50,000"
+/>
           </div>
         </div>
       </section>

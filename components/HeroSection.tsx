@@ -47,7 +47,7 @@ export default function HeroSection() {
   const slide = slides[activeSlide];
 
   return (
-    <section className="relative min-h-[760px] overflow-hidden bg-black">
+    <section className="relative min-h-[720px] overflow-hidden bg-black">
       {slides.map((item, index) => (
         <Image
           key={item.image}
@@ -83,7 +83,7 @@ export default function HeroSection() {
         <ChevronRight size={28} />
       </button>
 
-      <div className="container-width relative z-10 flex min-h-[760px] items-center justify-center px-5 py-24 text-center lg:px-12">
+      <div className="container-width relative z-10 flex min-h-[720px] items-center justify-center px-5 pb-32 pt-20 text-center lg:px-12">
         <div className="mx-auto max-w-5xl text-white">
           <div className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full border-2 border-white/70 bg-white/10 backdrop-blur">
             <HeartHandshake size={46} />
@@ -93,7 +93,7 @@ export default function HeroSection() {
             {slide.label}
           </p>
 
-          <h1 className="text-5xl font-black uppercase leading-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-5xl text-4xl font-black uppercase leading-tight sm:text-5xl lg:text-6xl">
             {slide.title}
           </h1>
 

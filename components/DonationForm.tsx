@@ -93,8 +93,8 @@ export default function DonationForm() {
             Choose your gift and cause
           </h1>
           <p className="mt-4 text-slate-600">
-            This demo form is ready to be connected to a real secure payment
-            gateway for live donations.
+            Choose your donation amount, select a cause, and continue through a secure
+            donation process.
           </p>
 
           <div className="mt-8 grid grid-cols-2 gap-3 rounded-2xl bg-cream p-2">

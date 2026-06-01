@@ -113,20 +113,29 @@ export default function ImpactStats() {
 
             <div className="grid gap-4 bg-white/10 p-8 lg:grid-cols-3 lg:p-10">
               {[
-                "Water tanks",
-                "Hygiene training",
-                "Community outreach",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-3xl bg-white p-5 text-center shadow-sm"
-                >
-                  <p className="text-sm font-black text-forest">{item}</p>
-                  <p className="mt-2 text-xs leading-5 text-slate-500">
-                    Demo project area for a live NGO campaign.
-                  </p>
-                </div>
-              ))}
+  {
+    title: "Water tanks",
+    text: "Installing storage tanks to improve access to safe water.",
+  },
+  {
+    title: "Hygiene training",
+    text: "Teaching practical hygiene habits for healthier families.",
+  },
+  {
+    title: "Community outreach",
+    text: "Working with local leaders to reach families most in need.",
+  },
+].map((item) => (
+  <div
+    key={item.title}
+    className="rounded-3xl bg-white p-5 text-center shadow-sm"
+  >
+    <p className="text-sm font-black text-forest">{item.title}</p>
+    <p className="mt-2 text-xs leading-5 text-slate-500">
+      {item.text}
+    </p>
+  </div>
+))}
             </div>
           </div>
         </div>

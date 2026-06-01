@@ -72,11 +72,11 @@ export default function Home() {
           <div>
             <h2 className="text-4xl font-black">Ready to support a cause?</h2>
             <p className="mt-3 text-emerald-50/80">
-              Make a one-time or monthly demo donation and view the full donor flow.
+                Make a one-time or monthly donation and help fund programs that support families, children, and communities.
             </p>
           </div>
           <Link href="/donate" className="btn-primary">
-            Go to Donation Page <ArrowRight className="ml-2" size={18} />
+            Donate Now <ArrowRight className="ml-2" size={18} />
           </Link>
         </div>
       </section>

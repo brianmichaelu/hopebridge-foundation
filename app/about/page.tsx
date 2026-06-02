@@ -2,8 +2,8 @@ import { Eye, HandHeart, ShieldCheck, Target, Users } from "lucide-react";
 
 const values = [
   { title: "Compassion", icon: HandHeart, text: "We respond to real human needs with dignity and respect." },
-  { title: "Transparency", icon: ShieldCheck, text: "We show donors how campaigns are structured and supported." },
-  { title: "Community", icon: Users, text: "We work with local partners and community leaders." }
+  { title: "Transparency", icon: ShieldCheck, text: "We keep donors informed about how programs are structured, supported, and delivered." },
+  { title: "Community", icon: Users, text: "We work with local leaders, volunteers, and partners to create lasting community impact." }
 ];
 
 const team = ["Amina Joseph", "Daniel Mwita", "Neema Patrick", "Joseph Kato"];
@@ -49,18 +49,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-white">
-        <div className="container-width">
-          <h2 className="text-4xl font-black text-navy">Our Values</h2>
-          <div className="mt-8 grid gap-6 lg:grid-cols-3">
-            {values.map((value) => {
-              const Icon = value.icon;
-              return (
-                <div key={value.title} className="rounded-[2rem] bg-cream p-8">
-                  <Icon className="text-coral" size={34} />
-                  <h3 className="mt-5 text-2xl font-black text-navy">{value.title}</h3>
-                  <p className="mt-3 leading-7 text-slate-600">{value.text}</p>
-                </div>
+      <section className="bg-white px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
+        <div className="mb-10 max-w-3xl">
+  <span className="text-sm font-black uppercase tracking-[0.25em] text-coral">
+    What Guides Us
+  </span>
+
+  <h2 className="mt-3 text-4xl font-black text-navy lg:text-[48px]">
+    Our Values
+  </h2>
+
+  <p className="mt-4 text-lg leading-8 text-slate-600">
+    These values guide how HopeBridge Foundation serves communities, works with partners, and earns donor trust.
+  </p>
+</div>
               );
             })}
           </div>

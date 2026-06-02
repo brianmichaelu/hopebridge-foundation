@@ -16,37 +16,25 @@ export default function PageTransition({
         key={pathname}
         initial={{
           opacity: 0,
-          y: 28,
-          scale: 0.985,
-          filter: "blur(8px)",
+          y: 24,
+          scale: 0.98,
         }}
         animate={{
           opacity: 1,
           y: 0,
           scale: 1,
-          filter: "blur(0px)",
         }}
         exit={{
           opacity: 0,
-          y: -18,
+          y: -16,
           scale: 0.99,
-          filter: "blur(6px)",
         }}
         transition={{
-          duration: 0.55,
+          duration: 0.5,
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 0.25,
-            delay: 0.12,
-          }}
-        >
-          {children}
-        </motion.div>
+        {children}
       </motion.div>
     </AnimatePresence>
   );

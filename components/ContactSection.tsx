@@ -185,7 +185,7 @@ export default function ContactSection() {
                   Dar es Salaam, Tanzania
                 </p>
                 <p className="mt-2 text-sm text-slate-500">
-                  Map embed can be added here.
+                  Community support and outreach coordination
                 </p>
               </div>
             </div>

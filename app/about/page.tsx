@@ -27,15 +27,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-cream">
+      <section className="bg-cream px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
         <div className="container-width grid gap-6 lg:grid-cols-2">
           <div className="rounded-[2rem] bg-white p-8 shadow-sm">
             <Target className="text-coral" size={34} />
             <h2 className="mt-5 text-3xl font-black text-navy">Our Mission</h2>
             <p className="mt-4 leading-8 text-slate-600">
-              To support vulnerable communities through practical programs in
-              food relief, education, healthcare, clean water, women empowerment,
-              and elderly care.
+              To provide practical support through food relief, education, healthcare,
+              clean water, women empowerment, and elderly care programs that improve
+              daily life for vulnerable communities.
             </p>
           </div>
           <div className="rounded-[2rem] bg-white p-8 shadow-sm">
@@ -67,7 +67,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-cream">
+      <section className="bg-cream px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
         <div className="container-width">
           <h2 className="text-4xl font-black text-navy">Demo Team</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

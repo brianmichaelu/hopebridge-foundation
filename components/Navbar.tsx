@@ -14,12 +14,12 @@ const navLinks = [
 ];
 
 const causeLinks = [
-  { label: "Feed the Hungry", href: "/causes#feed-the-hungry" },
-  { label: "Education", href: "/causes#education" },
-  { label: "Healthcare", href: "/causes#healthcare" },
-  { label: "Clean Water", href: "/causes#clean-water" },
-  { label: "Women & Girls", href: "/causes#women-girls" },
-  { label: "Elderly Support", href: "/causes#elderly-support" },
+  { label: "Feed the Hungry", href: "/causes/feed-the-hungry" },
+  { label: "Education", href: "/causes/every-child-in-school" },
+  { label: "Healthcare", href: "/causes/primary-healthcare-access" },
+  { label: "Clean Water", href: "/causes/safe-water-for-all" },
+  { label: "Women & Girls", href: "/causes/women-girls-empowerment" },
+  { label: "Elderly Support", href: "/causes/elderly-support" },
 ];
 
 export default function Navbar() {

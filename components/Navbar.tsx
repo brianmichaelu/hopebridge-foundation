@@ -24,11 +24,19 @@ const causeLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [causesOpen, setCausesOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-emerald-900/10 bg-white/95 backdrop-blur-xl">
       <nav className="container-width flex items-center justify-between px-5 py-4 lg:px-12">
-        <Link href="/" className="flex items-center gap-3">
+        <Link
+          href="/"
+          onClick={() => {
+            setOpen(false);
+            setCausesOpen(false);
+          }}
+          className="flex items-center gap-3"
+        >
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-forest text-white">
             <HeartHandshake size={24} />
           </span>
@@ -46,32 +54,43 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) =>
             link.label === "Causes" ? (
-              <div key={link.href} className="group relative">
-                <Link
-                  href={link.href}
+              <div key={link.href} className="relative">
+                <button
+                  type="button"
+                  onClick={() => setCausesOpen((value) => !value)}
                   className="flex items-center gap-1 text-sm font-bold text-slate-700 transition hover:text-coral"
                 >
-                  Causes <ChevronDown size={16} />
-                </Link>
+                  Causes
+                  <ChevronDown
+                    size={16}
+                    className={`transition ${
+                      causesOpen ? "rotate-180 text-coral" : ""
+                    }`}
+                  />
+                </button>
 
-                <div className="invisible absolute left-1/2 top-8 w-[520px] -translate-x-1/2 rounded-3xl border border-slate-100 bg-white p-5 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100">
-                  <div className="grid grid-cols-2 gap-3">
-                    {causeLinks.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="rounded-2xl bg-cream px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-forest hover:text-white"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                {causesOpen && (
+                  <div className="absolute left-1/2 top-10 w-[520px] -translate-x-1/2 rounded-3xl border border-slate-100 bg-white p-5 shadow-2xl">
+                    <div className="grid grid-cols-2 gap-3">
+                      {causeLinks.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setCausesOpen(false)}
+                          className="rounded-2xl bg-cream px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-forest hover:text-white"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ) : (
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() => setCausesOpen(false)}
                 className="text-sm font-bold text-slate-700 transition hover:text-coral"
               >
                 {link.label}
@@ -81,7 +100,11 @@ export default function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link href="/donate" className="btn-primary">
+          <Link
+            href="/donate"
+            onClick={() => setCausesOpen(false)}
+            className="btn-primary"
+          >
             Donate Now
           </Link>
         </div>

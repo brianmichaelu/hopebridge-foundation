@@ -63,8 +63,7 @@ export default function AboutPage() {
     These values guide how HopeBridge Foundation serves communities, works with partners, and earns donor trust.
   </p>
 </div>
-              );
-            })}
+             
           </div>
         </div>
       </section>

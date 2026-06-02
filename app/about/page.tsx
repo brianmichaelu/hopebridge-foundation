@@ -65,7 +65,7 @@ export default function AboutPage() {
 </div>
              
           </div>
-        </div>
+     
       </section>
 
       <section className="bg-cream px-5 py-14 sm:px-8 lg:px-12 lg:py-20">

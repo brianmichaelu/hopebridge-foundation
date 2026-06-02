@@ -17,12 +17,12 @@ export default function AboutPage() {
             About Us
           </span>
           <h1 className="mt-4 text-5xl font-black lg:text-6xl">
-            Building a bridge between generosity and real community needs
+            Connecting generosity with real community needs
           </h1>
           <p className="mt-6 text-lg leading-8 text-emerald-50/80">
-            HopeBridge Foundation is a demo NGO website concept designed to show
-            how a modern charitable organization can present programs, trust,
-            impact, donations, and volunteer opportunities online.
+           HopeBridge Foundation connects compassionate donors, volunteers, and partners
+            with practical community programs that support children, families, women,
+            elderly people, and vulnerable communities.
           </p>
         </div>
       </section>

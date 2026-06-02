@@ -48,9 +48,12 @@ export default function CauseCard({ cause }: Props) {
           <p className="mt-2 text-xs font-bold text-forest">{progress}% funded</p>
         </div>
 
-        <Link href="/donate" className="mt-6 inline-flex items-center text-sm font-black text-coral">
-          Support This Cause <ArrowRight className="ml-2" size={16} />
-        </Link>
+        <Link
+  href={`/causes/${cause.slug}`}
+  className="mt-6 inline-flex items-center text-sm font-black text-coral"
+>
+  Learn More <ArrowRight className="ml-2" size={16} />
+</Link>
       </div>
     </article>
   );

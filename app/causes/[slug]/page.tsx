@@ -12,9 +12,9 @@ import {
 import { causes } from "@/data/causes";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
@@ -23,8 +23,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: Props) {
-  const cause = causes.find((item) => item.slug === params.slug);
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const cause = causes.find((item) => item.slug === slug);
 
   if (!cause) {
     return {
@@ -38,8 +39,9 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
-export default function CauseDetailPage({ params }: Props) {
-  const cause = causes.find((item) => item.slug === params.slug);
+export default async function CauseDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const cause = causes.find((item) => item.slug === slug);
 
   if (!cause) {
     notFound();
@@ -204,11 +206,11 @@ export default function CauseDetailPage({ params }: Props) {
             </div>
 
             <Link
-  href={`/causes/${cause.slug}`}
-  className="mt-6 inline-flex items-center text-sm font-black text-coral"
->
-  Learn More <ArrowRight className="ml-2" size={16} />
-</Link>
+              href={`/donate?cause=${cause.slug}`}
+              className="btn-primary mt-8 w-full"
+            >
+              Support This Cause <ArrowRight className="ml-2" size={18} />
+            </Link>
           </div>
         </div>
       </section>

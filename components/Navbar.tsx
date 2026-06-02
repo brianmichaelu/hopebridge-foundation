@@ -10,16 +10,16 @@ const navLinks = [
   { href: "/causes", label: "Causes" },
   { href: "/impact", label: "Impact" },
   { href: "/volunteer", label: "Volunteer" },
-  { href: "/contact", label: "Contact" }
+  { href: "/contact", label: "Contact" },
 ];
 
 const causeLinks = [
-  "Feed the Hungry",
-  "Education",
-  "Healthcare",
-  "Clean Water",
-  "Women & Girls",
-  "Elderly Support"
+  { label: "Feed the Hungry", href: "/causes#feed-the-hungry" },
+  { label: "Education", href: "/causes#education" },
+  { label: "Healthcare", href: "/causes#healthcare" },
+  { label: "Clean Water", href: "/causes#clean-water" },
+  { label: "Women & Girls", href: "/causes#women-girls" },
+  { label: "Elderly Support", href: "/causes#elderly-support" },
 ];
 
 export default function Navbar() {
@@ -32,6 +32,7 @@ export default function Navbar() {
           <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-forest text-white">
             <HeartHandshake size={24} />
           </span>
+
           <span>
             <span className="block text-lg font-black leading-5 text-forest">
               HopeBridge
@@ -52,15 +53,16 @@ export default function Navbar() {
                 >
                   Causes <ChevronDown size={16} />
                 </Link>
+
                 <div className="invisible absolute left-1/2 top-8 w-[520px] -translate-x-1/2 rounded-3xl border border-slate-100 bg-white p-5 opacity-0 shadow-2xl transition group-hover:visible group-hover:opacity-100">
                   <div className="grid grid-cols-2 gap-3">
                     {causeLinks.map((item) => (
                       <Link
-                        key={item}
-                        href="/causes"
+                        key={item.href}
+                        href={item.href}
                         className="rounded-2xl bg-cream px-4 py-3 text-sm font-semibold text-slate-700 transition hover:bg-forest hover:text-white"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     ))}
                   </div>
@@ -97,16 +99,42 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-slate-100 bg-white px-5 py-5 lg:hidden">
           <div className="flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-2xl bg-cream px-4 py-3 text-sm font-bold text-slate-800"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.label === "Causes" ? (
+                <div key={link.href} className="rounded-2xl bg-cream p-3">
+                  <Link
+                    href="/causes"
+                    onClick={() => setOpen(false)}
+                    className="block rounded-xl px-2 py-2 text-sm font-black text-slate-800"
+                  >
+                    Causes
+                  </Link>
+
+                  <div className="mt-2 grid gap-2">
+                    {causeLinks.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className="rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-700"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-2xl bg-cream px-4 py-3 text-sm font-bold text-slate-800"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+
             <Link
               href="/donate"
               onClick={() => setOpen(false)}

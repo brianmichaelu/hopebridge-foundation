@@ -75,7 +75,7 @@ export default function DonationForm() {
     return Object.keys(nextErrors).length === 0;
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (!validate()) return;
@@ -98,7 +98,34 @@ export default function DonationForm() {
       Always verify completed payments using webhooks.
     */
 
-    router.push("/thank-you");
+    try {
+  const response = await fetch("/api/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      amount: finalAmount,
+      cause,
+      donationType,
+      donor: form,
+    }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok || !data.checkoutUrl) {
+    throw new Error(data.error || "Could not start checkout");
+  }
+
+  window.location.href = data.checkoutUrl;
+} catch (error) {
+  console.error(error);
+  setErrors((current) => ({
+    ...current,
+    payment: "Payment checkout could not start. Please try again.",
+  }));
+}
   }
 
   return (
@@ -288,6 +315,12 @@ export default function DonationForm() {
           <button type="submit" className="btn-primary mt-8 w-full">
             Continue to Secure Donation <Send className="ml-2" size={18} />
           </button>
+
+          {errors.payment && (
+  <p className="mt-3 rounded-2xl bg-red-50 p-4 text-sm font-bold text-coral">
+          {errors.payment}
+  </p>
+  )}
 
           <p className="mt-4 flex items-center justify-center gap-2 text-sm font-semibold text-slate-600">
             <Lock size={16} /> All payments go through a secure payment gateway

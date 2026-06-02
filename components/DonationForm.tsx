@@ -99,7 +99,7 @@ export default function DonationForm() {
     */
 
     try {
-  const response = await fetch("/api/create-checkout-session", {
+  const response = await fetch("/api/create-payment", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

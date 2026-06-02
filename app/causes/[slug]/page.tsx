@@ -204,11 +204,11 @@ export default function CauseDetailPage({ params }: Props) {
             </div>
 
             <Link
-              href={`/donate?cause=${cause.slug}`}
-              className="btn-primary mt-8 w-full"
-            >
-              Support This Cause <ArrowRight className="ml-2" size={18} />
-            </Link>
+  href={`/causes/${cause.slug}`}
+  className="mt-6 inline-flex items-center text-sm font-black text-coral"
+>
+  Learn More <ArrowRight className="ml-2" size={16} />
+</Link>
           </div>
         </div>
       </section>

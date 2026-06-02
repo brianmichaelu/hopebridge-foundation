@@ -6,21 +6,23 @@ import {
   HeartHandshake,
   ArrowRight,
   CheckCircle2,
+  FileText,
+  Users,
 } from "lucide-react";
 import Link from "next/link";
 
 const stories = [
   {
     title: "School support for rural learners",
-    text: "Children received school materials, bags, notebooks, and mentoring support to help them stay in class with confidence.",
+    text: "Children receive school materials, bags, notebooks, and mentoring support to help them stay in class with confidence.",
   },
   {
     title: "Clean water support for families",
-    text: "Community water access programs helped families reduce long walking distances and improve daily hygiene.",
+    text: "Community water access programs help families reduce long walking distances and improve daily hygiene.",
   },
   {
     title: "Food relief for vulnerable households",
-    text: "Emergency food packs supported families during difficult periods while connecting them to longer-term community care.",
+    text: "Emergency food packs support families during difficult periods while connecting them to longer-term community care.",
   },
 ];
 
@@ -31,13 +33,26 @@ const fundUse = [
   "Clean water and hygiene projects",
 ];
 
+const reports = [
+  {
+    title: "Program updates",
+    text: "Regular updates help donors understand what has been delivered and which communities were reached.",
+    icon: FileText,
+  },
+  {
+    title: "Community feedback",
+    text: "Local leaders, volunteers, and families help guide programs toward real needs on the ground.",
+    icon: Users,
+  },
+];
+
 export default function ImpactPage() {
   return (
     <>
       <section className="relative overflow-hidden bg-forest text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(245,158,11,0.22),transparent_35%)]" />
 
-        <div className="container-width relative grid items-center gap-10 px-5 py-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-12 lg:py-24">
+        <div className="container-width relative grid items-center gap-10 px-5 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:px-12 lg:py-20">
           <div>
             <span className="text-sm font-black uppercase tracking-[0.3em] text-gold">
               Impact
@@ -76,12 +91,14 @@ export default function ImpactPage() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 48vw"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6 rounded-3xl bg-white/95 p-5 text-navy shadow-xl">
                 <p className="text-sm font-black uppercase tracking-[0.2em] text-coral">
                   Community Progress
                 </p>
+
                 <h2 className="mt-2 text-2xl font-black">
                   Every donation should connect to a visible result.
                 </h2>
@@ -93,15 +110,21 @@ export default function ImpactPage() {
 
       <ImpactStats />
 
-      <section className="section-padding bg-cream">
+      <section className="bg-cream px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
         <div className="container-width">
           <div className="mb-10 max-w-3xl">
             <span className="text-sm font-black uppercase tracking-[0.25em] text-coral">
-              Stories from the field
+              Stories from the Field
             </span>
-            <h2 className="mt-3 text-4xl font-black text-navy lg:text-5xl">
+
+            <h2 className="mt-3 text-4xl font-black leading-tight text-navy lg:text-[48px]">
               Real impact is best shown through human stories
             </h2>
+
+            <p className="mt-4 text-lg leading-8 text-slate-600">
+              Behind every campaign are families, children, volunteers, and
+              communities working toward a better future.
+            </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-3">
@@ -116,14 +139,16 @@ export default function ImpactPage() {
                   {story.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-slate-600">{story.text}</p>
+                <p className="mt-3 leading-7 text-slate-600">
+                  {story.text}
+                </p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-14">
+      <section className="bg-white px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
         <div className="container-width grid gap-6 lg:grid-cols-2">
           <div className="rounded-[2rem] bg-forest p-8 text-white lg:p-10">
             <ChartPie className="text-gold" size={36} />
@@ -133,15 +158,16 @@ export default function ImpactPage() {
             </h2>
 
             <p className="mt-4 leading-8 text-emerald-50/80">
-              A live NGO can use this section to explain how donations are
-              allocated across program delivery, operations, outreach, and
-              reporting.
+              Donations help support practical programs across food relief,
+              education, healthcare, clean water, outreach, reporting, and
+              community coordination.
             </p>
 
             <div className="mt-7 space-y-3">
               {fundUse.map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="text-gold" size={20} />
+
                   <span className="text-sm font-semibold text-emerald-50">
                     {item}
                   </span>
@@ -158,9 +184,8 @@ export default function ImpactPage() {
             </h2>
 
             <p className="mt-4 leading-8 text-slate-600">
-              For a real organization, this page can include annual reports,
-              campaign updates, receipts, partner logos, beneficiary stories,
-              and verified project photos.
+              Clear reporting helps donors understand how support is used,
+              which programs are active, and how communities are benefiting.
             </p>
 
             <div className="mt-7 grid gap-4 sm:grid-cols-2">
@@ -179,6 +204,27 @@ export default function ImpactPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="container-width mt-8 grid gap-6 lg:grid-cols-2">
+          {reports.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <div
+                key={item.title}
+                className="rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm"
+              >
+                <Icon className="text-coral" size={34} />
+
+                <h3 className="mt-5 text-2xl font-black text-navy">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
     </>

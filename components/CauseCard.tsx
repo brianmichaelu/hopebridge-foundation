@@ -11,7 +11,10 @@ export default function CauseCard({ cause }: Props) {
   const progress = Math.min(Math.round((cause.raised / cause.target) * 100), 100);
 
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+    <article
+  id={cause.slug}
+  className="scroll-mt-32 overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+>
       <div className="relative h-64">
         <Image
           src={cause.image}

@@ -174,8 +174,7 @@ export default function ContactSection() {
               </h2>
 
               <p className="mt-3 leading-7 text-slate-600">
-                This section can be connected to Google Maps for a live NGO
-                office, project location, or community center.
+                HopeBridge Foundation is based in Dar es Salaam and works with communities, volunteers, and partners to support practical local programs.
               </p>
             </div>
 
